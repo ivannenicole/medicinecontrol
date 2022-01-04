@@ -27,6 +27,52 @@
 
     </head>
     <body>
+        <!-- Navbar superior -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+
+            <div class="container">
+            <span class="navbar-brand mb-0 h1">MedicineControl</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <div class="collapse navbar-collapse" id="navbarSite">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contatos</a>
+                        </li>
+                        @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <form action="/logout" method="POST">
+                            @csrf
+                            <a href="/logout"
+                                class="nav-link"
+                                onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                                Sair
+                            </a>
+                            </form>
+                        </li>
+                        @endauth
+                        @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="login">Login</a>
+                        </li>
+                        @endguest
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
         @yield('content')
 
         <!-- Footer -->

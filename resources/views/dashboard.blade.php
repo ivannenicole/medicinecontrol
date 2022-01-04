@@ -1,15 +1,23 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.main')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
+@section('title', 'MedicineControl')
+
+@section('content')
+
+<div id="clientes-container" class="col-md-12">
+    <h2> Clientes cadastrados<h2>
+    <div id="cards-container" class="row">
+        <!-- Colocar um for para percorrer o banco de dados-->
+        <div class="card col-md-3">
+            <img class="card-img-top" src="imagens/img-card.jpg" alt="Imagem de capa do card">
+            <div class="card-body">
+            <h5 class="card-title">Nome do cliente</h5>
+            <p class="card-text">Informações básicas do cliente</p>
+            <a href="#" class="btn btn-primary">Ver mais</a>
             </div>
         </div>
     </div>
-</x-app-layout>
+</div>
+
+
+@endsection
