@@ -1,0 +1,80 @@
+@media screen and (min-width: 992px){
+    /* PERFIL */
+    .navbar .nav-item #profile-image{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+    /* Landing Page */
+    .services .services-cards{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+     /* DASHBOARD */
+     .card-body a{
+        margin-top: 10px;
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 992px){
+    /* FORGOT-PASSWORD */
+    .bloco .w-full{
+        width: 90%;
+    }
+
+    /* DASHBOARD */
+    .dashboard .estoque{
+        width: 85% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Landing Page */
+    .home .body-home{
+        width: 80%;
+    }
+
+    /* FORGOT-PASSWORD */
+    .bloco .w-full{
+        width: 100%;
+    }
+
+    /* DASHBOARD */
+    .dashboard div{
+        flex-wrap: wrap;
+    }
+    .dashboard .card{
+        width: 100% !important;
+    }
+    .dashboard .estoque{
+        width: 100% !important;
+    }
+    .title-page{
+        width: 50% !important;
+    }    
+    .dashboard .card:nth-child(2){
+        margin-left: 0px !important;
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Landing Page */
+    .home{
+        width: 90% !important;
+    }
+    .home .body-home h1{
+        font-size: 1.5rem;
+    }
+    .home .body-home p{
+        font-size: 1rem;
+    }
+
+    .title-page{
+        width: 80% !important;
+    }
+}
